@@ -13,7 +13,8 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Staff Software Engineer | AI and Machine Learning Enthusiast
+# Site settings
+title: "Sai Chaitanya Nandipati | Machine Learning Portfolio"
 email: saich.work@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -27,28 +28,16 @@ search: true
 # Build settings
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
-# Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
+paginate: 5 # Adjust this value based on how many projects you want to showcase per page
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: "America/New_York" # Set your timezone accordingly
 
 include:
   - _pages
+  - _projects # Include a folder for projects
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
-
-# Plugins (previously gems:)
+# Plugins
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
@@ -56,11 +45,12 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+  - jekyll-assets # Optional: For better asset management, if needed
 
 author:
-  name   : "Sai Chaitanya Nandipati"
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "Dynamic software developer with over 8 years of experience in creating efficient applications and optimizing automation processes. With a master’s degree in Computer Science focused on Machine Learning, I am eager to leverage my software expertise to drive innovative solutions in the AI field."
+  name: "Sai Chaitanya Nandipati"
+  avatar: "/assets/images/bio-photo.jpg"
+  bio: "Dynamic software developer with over 8 years of experience in creating efficient applications and optimizing automation processes. With a master’s degree in Computer Science focused on Machine Learning, I am eager to leverage my software expertise to drive innovative solutions in the AI field."
   links:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
@@ -98,9 +88,19 @@ defaults:
       layout: single
       author_profile: true
 
+# Projects section
+projects:
+  title: "My Projects"
+  description: "Explore my work in Machine Learning and AI, showcasing innovative solutions and applications."
+  items:
+    - title: "Transfer Learning with AlexNet for Cricket Shot Classification"
+      url: "https://github.com/saichn/Transfer-Learning-with-AlexNet-for-Cricket-Shot-Classification"
+      description: "A project that utilizes transfer learning techniques with AlexNet for cricket shot classification, achieving high accuracy in shot detection."
+
 category_archive:
   type: liquid
   path: /categories/
 tag_archive:
   type: liquid
   path: /tags/
+
