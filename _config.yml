@@ -28,10 +28,10 @@ search: true
 # Build settings
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
-permalink: /:categories/:title/
-paginate: 5 # Adjust this value based on how many projects you want to showcase per page
-paginate_path: /page:num/
-timezone: "America/New_York" # Set your timezone accordingly
+  #permalink: /:categories/:title/
+  #paginate: 5 # Adjust this value based on how many projects you want to showcase per page
+  #paginate_path: /page:num/
+  #timezone: "America/New_York" # Set your timezone accordingly
 
 include:
   - _pages
@@ -69,17 +69,6 @@ footer:
       url: "https://github.com/saichn"
     
 defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
   # _projects
   - scope:
       path: "_projects"
@@ -98,20 +87,4 @@ defaults:
     values:
       layout: single
       author_profile: true
-
-# Projects section
-projects:
-  title: "My Projects"
-  description: "Explore my work in Machine Learning and AI, showcasing innovative solutions and applications."
-  items:
-    - title: "Transfer Learning with AlexNet for Cricket Shot Classification"
-      url: "https://github.com/saichn/Transfer-Learning-with-AlexNet-for-Cricket-Shot-Classification"
-      description: "A project that utilizes transfer learning techniques with AlexNet for cricket shot classification, achieving high accuracy in shot detection."
-
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
 
